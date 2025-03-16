@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.section {
+  @apply py-24 md:py-32 lg:py-40;
+}
+/* @-moz-document url-prefix() {
+  .firefox-backdrop {
+    backdrop-filter: blur(12px) !important;
+  }
+} */
+.line {
+  @apply overflow-hidden;
+}
+.word {
+  @apply translate-y-full;
+}
