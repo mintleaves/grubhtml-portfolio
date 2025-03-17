@@ -1,5 +1,5 @@
 "use client";
-import { FC, useEffect, useState } from "react";
+import { FC, useEffect, useState, MouseEvent } from "react";
 import Button from "@/components/Button";
 import { motion, useAnimate } from "motion/react";
 
@@ -208,7 +208,10 @@ const Header: FC = () => {
                   />
                 </svg>
               </div>
-              <Button variant="primary" className="hidden md:inline-flex">
+              <Button
+                variant="primary"
+                className="hidden md:inline-flex transition-all duration-500 hover:bg-red-700 hover:text-stone-300"
+              >
                 Contact Us
               </Button>
             </div>
