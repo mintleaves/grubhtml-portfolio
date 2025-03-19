@@ -7,6 +7,7 @@ import Button from "@/components/Button";
 import SplitType from "split-type";
 import { useAnimate, motion, useScroll, useTransform } from "motion/react";
 import { stagger } from "motion";
+import Skills from "@/components/Skills";
 
 const Hero: FC = () => {
   const [titleScope, titleAnimate] = useAnimate();
@@ -39,7 +40,7 @@ const Hero: FC = () => {
         delay: stagger(0.2),
       }
     );
-  }, []);
+  }, [titleScope, titleAnimate]);
   return (
     <section>
       <div className="grid md:grid-cols-12 md:h-screen items-stretch sticky top-0">
@@ -123,18 +124,21 @@ const Hero: FC = () => {
               width: heroImageWidth,
             }}
           >
-            <video
+            {/* <video
               src="/videos/hero-video.mp4"
               className="size-full object-cover"
               autoPlay
               muted
               loop
-            />
+            /> */}
+
             {/* <Image
               src={heroImage}
               className="size-full object-cover"
               alt="coding"
             /> */}
+            
+            <Skills />
           </motion.div>
         </div>
       </div>

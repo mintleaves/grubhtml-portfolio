@@ -29,6 +29,17 @@ const config: Config = {
           500: 'color-mix(in srgb, theme("colors.red.500") 50%, theme("colors.orange.700") 50%)',
         },
       },
+      animation: {
+        scroll:
+          "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
+      },
+      keyframes: {
+        scroll: {
+          to: {
+            transform: "translate(calc(-50% - 0.5rem))",
+          },
+        },
+      },
     },
   },
   plugins: [],
