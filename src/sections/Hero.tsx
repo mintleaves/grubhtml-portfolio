@@ -1,29 +1,13 @@
 "use client";
-import { FC, useEffect, useRef } from "react";
-/* eslint-disable-next-line @typescript-eslint/no-unused-vars */
-// import Image from "next/image";
-// import heroImage from "@/assets/images/coding.jpg";
+import { FC, useEffect } from "react";
 import Button from "@/components/Button";
 import SplitType from "split-type";
-import { useAnimate, motion, useScroll, useTransform } from "motion/react";
+import { useAnimate, motion } from "motion/react";
 import { stagger } from "motion";
-import Skills from "@/components/Skills";
+import CodeBlockDemo from "../components/CodeBlockDemo";
 
 const Hero: FC = () => {
   const [titleScope, titleAnimate] = useAnimate();
-  const scrollingDiv = useRef<HTMLDivElement>(null);
-
-  const { scrollYProgress } = useScroll({
-    target: scrollingDiv,
-    offset: ["start end", "end end"],
-  });
-
-  const heroImageWidth = useTransform(
-    scrollYProgress,
-    [0, 1],
-    ["100%", "240%"]
-  );
-  // 12(total cols) / 5(image taken 5 cols) = 2.4 * 100 = 240%
   useEffect(() => {
     new SplitType(titleScope.current, {
       types: "lines,words",
@@ -42,10 +26,13 @@ const Hero: FC = () => {
     );
   }, [titleScope, titleAnimate]);
   return (
-    <section>
-      <div className="grid md:grid-cols-12 md:h-screen items-stretch sticky top-0">
-        <div className="md:col-span-7 flex flex-col justify-center">
-          <div className="container !max-w-full">
+    <section className="container !max-w-full" id="home">
+      <div
+        className="grid lg:grid-cols-12 md:h-screen items-stretch sticky top-0
+"
+      >
+        <div className="lg:col-span-7 flex flex-col justify-center">
+          <div className="">
             <motion.h1
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -55,7 +42,7 @@ const Hero: FC = () => {
               Creating modern digital experiences with engaging visuals and
               complete web solutions.
             </motion.h1>
-            <div className="flex flex-col md:flex-row md:items-center mt-10 items-start gap-6">
+            <div className="flex flex-col md:flex-row md:items-center mt-10 items-start gap-6 sm:pb-6">
               <motion.div
                 initial={{ opacity: 0, y: "100%" }}
                 animate={{ opacity: 1, y: 0 }}
@@ -117,32 +104,10 @@ const Hero: FC = () => {
             </div>
           </div>
         </div>
-        <div className="md:col-span-5 relative">
-          <motion.div
-            className="mt-20 md:mt-0 md:size-full md:absolute md:right-0 max-md:!w-full"
-            style={{
-              width: heroImageWidth,
-            }}
-          >
-            {/* <video
-              src="/videos/hero-video.mp4"
-              className="size-full object-cover"
-              autoPlay
-              muted
-              loop
-            /> */}
-
-            {/* <Image
-              src={heroImage}
-              className="size-full object-cover"
-              alt="coding"
-            /> */}
-            
-            <Skills />
-          </motion.div>
+        <div className="lg:col-span-5 flex items-center justify-center sm:p-2">
+          <CodeBlockDemo />
         </div>
       </div>
-      <div className="md:h-[200vh]" ref={scrollingDiv}></div>
     </section>
   );
 };

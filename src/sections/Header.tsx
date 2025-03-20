@@ -6,6 +6,10 @@ import { motion, useAnimate } from "motion/react";
 /* eslint-disable-next-line @typescript-eslint/no-unused-vars */
 const navItems = [
   {
+    label: "Home",
+    href: "#home",
+  },
+  {
     label: "About",
     href: "#intro",
   },
@@ -131,7 +135,7 @@ const Header: FC = () => {
               onClick={handleClickMobileNavItem}
             >
               <div className="container !max-w-full flex items-center justify-between">
-                <span className="text-3xl group-hover/nav-item:pl-4 transition-all duration-500">
+                <span className="text-2xl md:text-3xl group-hover/nav-item:pl-4 transition-all duration-500">
                   {label}
                 </span>
                 <svg
@@ -159,7 +163,7 @@ const Header: FC = () => {
           <div className="flex justify-between h-20 items-center">
             <div>
               <a href="/">
-                <span className="text-2xl font-bold text-white">
+                <span className="text-2xl md:text-3xl font-bold text-white">
                   GrubHTML.com
                 </span>
               </a>

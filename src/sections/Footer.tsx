@@ -7,6 +7,10 @@ import { stagger } from "motion";
 
 const navItems = [
   {
+    href: "#home",
+    label: "Home",
+  },
+  {
     href: "#about",
     label: "About",
   },
