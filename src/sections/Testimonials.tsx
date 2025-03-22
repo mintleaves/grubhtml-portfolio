@@ -59,7 +59,7 @@ const testimonials = [
     quote:
       "Fastest response times, great communication, very trustworthy. We plan to continue working with him on many projects in the future. He showed great patience while walking me through creating a MySQL Database for the first time, and he is very much appreciated.",
     name: "WeAre360apparel",
-    title: "Screen printing shop, Washington",
+    title: "Apparel Store, Washington",
   },
   {
     quote: "You are the best!!",
@@ -69,7 +69,7 @@ const testimonials = [
   {
     quote: "Very responsive and fast service!",
     name: "WeAre360apparel",
-    title: "Screen printing shop, Washington",
+    title: "Apparel Store, Washington",
   },
   {
     quote: "Thanks again !",

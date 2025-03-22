@@ -26,12 +26,12 @@ const Hero: FC = () => {
     );
   }, [titleScope, titleAnimate]);
   return (
-    <section className="container !max-w-full" id="home">
+    <section className="container !max-w-full " id="home">
       <div
-        className="grid lg:grid-cols-12 md:h-screen items-stretch sticky top-0
+        className="md:grid md:grid-cols-12 md:h-screen items-stretch sticky top-0 overflow-hidden flex flex-col gap-8
 "
       >
-        <div className="lg:col-span-7 flex flex-col justify-center">
+        <div className="md:col-span-6 lg:col-span-7 flex flex-col justify-center">
           <div className="">
             <motion.h1
               initial={{ opacity: 0 }}
@@ -42,7 +42,7 @@ const Hero: FC = () => {
               Creating modern digital experiences with engaging visuals and
               complete web solutions.
             </motion.h1>
-            <div className="flex flex-col md:flex-row md:items-center mt-10 items-start gap-6 sm:pb-6">
+            <div className="flex flex-col md:flex-row md:items-center mt-10 items-start gap-6">
               <motion.div
                 initial={{ opacity: 0, y: "100%" }}
                 animate={{ opacity: 1, y: 0 }}
@@ -87,6 +87,11 @@ const Hero: FC = () => {
                       </div>
                     </div>
                   }
+                  onClick={() =>
+                    document
+                      .getElementById("projects")
+                      ?.scrollIntoView({ behavior: "smooth" })
+                  }
                 >
                   <span>View My Work</span>
                 </Button>
@@ -104,7 +109,7 @@ const Hero: FC = () => {
             </div>
           </div>
         </div>
-        <div className="lg:col-span-5 flex items-center justify-center sm:p-2">
+        <div className="md:col-span-6 lg:col-span-5 flex items-center justify-center">
           <CodeBlockDemo />
         </div>
       </div>

@@ -55,10 +55,10 @@ export const CodeBlock = ({
     : highlightLines;
 
   return (
-    <div className="relative w-full h-full rounded-lg dark:bg-[linear-gradient(180deg,#27272a,#18181b)] p-4 font-mono text-sm">
+    <div className="relative w-full h-full rounded-lg dark:bg-[linear-gradient(180deg,#27272a,#18181b)] p-2 md:p-4 font-mono text-sm ">
       <div className="flex flex-col gap-2">
         {tabsExist && (
-          <div className="flex  overflow-x-auto">
+          <div className="flex overflow-x-auto">
             {tabs.map((tab, index) => (
               <button
                 key={index}

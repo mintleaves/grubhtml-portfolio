@@ -35,7 +35,7 @@ const Intro: FC = () => {
   return (
     <section className="section mt-12 md:mt-16 lg:mt-20" id="intro" ref={scope}>
       <div className="container !max-w-full">
-        <h2 className="text-4xl md:text-7xl lg:text-8xl lg:w-[80%]">
+        <h2 className="text-4xl md:text-6xl lg:text-8xl lg:w-[80%]">
           Offering animated visuals, UI/UX design, full-stack web development,
           domain hosting, and SEO, we create exceptional digital experiences.
         </h2>
