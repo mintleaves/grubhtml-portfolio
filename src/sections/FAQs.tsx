@@ -6,24 +6,29 @@ import { twMerge } from "tailwind-merge";
 /* eslint-disable-next-line @typescript-eslint/no-unused-vars */
 const faqs = [
   {
+    question: "What specific services do you offer?",
+    answer:
+      "We specialize in developing full-stack applications, as well as crafting highly responsive, frontend-focused websites using clean, custom code. Our approach ensures optimal performance, scalability, and a tailored user experience that aligns with your brand’s unique vision and goals.",
+  },
+  {
     question: "How long does it take to build a website?",
     answer:
-      "It depends on the complexity of the website and the scope of the project.",
+      "The time required to build a website is influenced by factors such as design complexity, functionality, and content development. We typically deliver smaller projects within two weeks and larger projects within three months.",
   },
   {
     question: "What is your development process like?",
     answer:
-      "I follow a hands-on approach starting with project planning, building out the core features, and regular check-ins to make sure everything matches your needs.",
+      "We take a hands-on approach, starting with detailed project planning, developing core features, and providing regular progress updates through live demonstrations on our own hosting platform to ensure the project aligns with your vision and requirements",
+  },
+  {
+    question: "What other service do you offer?",
+    answer:
+      "We also offer website cloning, SEO optimization, error handling for existing projects, bug fixing, and reliable hosting services to ensure optimal performance and scalability.",
   },
   {
     question: "Do you work with international clients?",
     answer:
-      "Yes, I work with clients globally and can accommodate different time zones for meetings and communication.",
-  },
-  {
-    question: "What industries do you specialize in?",
-    answer:
-      "I have experience across various industries including technology, retail, hospitality, and professional services, bringing fresh perspectives to each project.",
+      "Yes, we collaborate with clients worldwide and are flexible in accommodating different time zones for seamless communication and meetings. Our experience includes working with clients from Germany, Canada, the US, Israel, and, of course, our home country, Bangladesh.",
   },
 ];
 
@@ -54,7 +59,7 @@ const FAQs: FC = () => {
               ></div>
               <div
                 className={twMerge(
-                  "flex items-center justify-between gap-4 transition-all duration-700 group-hover/faq:lg:px-8",
+                  "flex items-center justify-between gap-4 transition-all duration-700 group-hover/faq:sm:pl-3 group-hover/faq:md:pl-4 group-hover/faq:lg:px-8",
                   faqIndex === selectedIndex && "lg:px-8"
                 )}
               >
@@ -86,7 +91,7 @@ const FAQs: FC = () => {
               <AnimatePresence>
                 {faqIndex === selectedIndex && (
                   <motion.div
-                    className="overflow-hidden lg:px-8"
+                    className="overflow-hidden pl-3 md:pl-4 lg:px-8"
                     initial={{ height: 0 }}
                     animate={{ height: "auto" }}
                     exit={{ height: 0 }}
