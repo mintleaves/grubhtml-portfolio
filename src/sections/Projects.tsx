@@ -3,7 +3,8 @@ import image1 from "@/assets/images/project-1.png";
 import image2 from "@/assets/images/project-2.png";
 import image3 from "@/assets/images/project-3.png";
 import image4 from "@/assets/images/project-4.png";
-import image5 from "@/assets/images/project-5.png";
+// import image5 from "@/assets/images/project-5.png";
+import image6 from "@/assets/images/project-6.png";
 import Image from "next/image";
 
 /* eslint-disable-next-line @typescript-eslint/no-unused-vars */
@@ -21,11 +22,11 @@ const projects = [
     image: image4,
   },
   {
-    name: "360 Apparel Retro",
-    image: image5,
+    name: "Movie Ocean",
+    image: image6,
   },
   {
-    name: "Amazon CSS",
+    name: "Amazon Clone",
     image: image2,
   },
 ];

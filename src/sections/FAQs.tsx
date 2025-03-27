@@ -28,7 +28,7 @@ const faqs = [
   {
     question: "Do you work with international clients?",
     answer:
-      "Yes, we collaborate with clients worldwide and are flexible in accommodating different time zones for seamless communication and meetings. Our experience includes working with clients from Germany, Canada, the US, Israel, and, of course, our home country, Bangladesh.",
+      "Yes, we collaborate with clients worldwide and are flexible in accommodating different time zones for seamless communication and meetings. Our experience includes working with clients from Germany, Canada, the US, and of course, our home country, Bangladesh.",
   },
 ];
 

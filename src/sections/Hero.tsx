@@ -104,7 +104,16 @@ const Hero: FC = () => {
                   delay: 2.2,
                 }}
               >
-                <Button variant="text">Let&apos;s Talk</Button>
+                <Button
+                  variant="text"
+                  onClick={() =>
+                    document
+                      .getElementById("contact")
+                      ?.scrollIntoView({ behavior: "smooth" })
+                  }
+                >
+                  Let&apos;s Talk
+                </Button>
               </motion.div>
             </div>
           </div>
