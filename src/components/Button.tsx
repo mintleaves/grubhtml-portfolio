@@ -1,5 +1,5 @@
 // import { button } from "motion/react-client";
-import { ButtonHTMLAttributes } from "react";
+import {ReactNode , ButtonHTMLAttributes } from "react";
 import { twMerge } from "tailwind-merge";
 
 const Button = (

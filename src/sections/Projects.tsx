@@ -12,22 +12,27 @@ const projects = [
   {
     name: "Talent First",
     image: image1,
+    url: "https://rahayudesign.com/",
   },
   {
     name: "UFit",
     image: image3,
+    url: "https://rahayudesign.com/",
   },
   {
     name: "Tarkov Tracker",
     image: image4,
+    url: "https://tarkovtracker.ca/",
   },
   {
-    name: "Movie Ocean",
+    name: "TenFlix",
     image: image6,
+    url: "https://tenflix.grubhtml.com/",
   },
   {
     name: "Amazon Clone",
     image: image2,
+    url: "",
   },
 ];
 
@@ -37,10 +42,12 @@ const Projects: FC = () => {
       <div className="container !max-w-full">
         <h2 className="text-4xl md:text-7xl lg:text-8xl">Selected Works</h2>
         <div className="mt-10 md:mt-16 lg:mt-20">
-          {projects.map(({ name, image }) => (
+          {projects.map(({ name, image, url }) => (
             <a
-              href="#"
+              href={url}
               key={name}
+              target="_blank"
+              rel="noopener noreferrer"
               className="border-t last:border-b border-stone-400 border-dotted py-6 md:py-8 lg:py-10 flex flex-col relative group/project"
             >
               <div className="absolute bottom-0 left-0 w-full h-0 group-hover/project:h-full transition-all duration-700 bg-stone-300"></div>
