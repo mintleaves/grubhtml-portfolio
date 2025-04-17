@@ -1,9 +1,18 @@
 "use client";
 import React from "react";
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import dynamic from "next/dynamic";
+// import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { atomDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import { IconCheck, IconCopy } from "@tabler/icons-react";
 import { motion, AnimatePresence } from "motion/react";
+
+const SyntaxHighlighter = dynamic(
+  () =>
+    import("react-syntax-highlighter").then((mod) => ({
+      default: mod.Prism,
+    })),
+  { ssr: false }
+);
 
 type CodeBlockProps = {
   language: string;
@@ -55,7 +64,7 @@ export const CodeBlock = ({
     : highlightLines;
 
   return (
-    <div className="relative w-full h-full rounded-lg dark:bg-[linear-gradient(180deg,#27272a,#18181b)] p-2 md:p-4 font-mono text-sm ">
+    <div className="relative w-full h-full rounded-lg bg-[linear-gradient(180deg,#27272a,#18181b)] p-2 md:p-4 font-mono text-sm ">
       <div className="flex flex-col gap-2">
         {tabsExist && (
           <div className="flex overflow-x-auto">

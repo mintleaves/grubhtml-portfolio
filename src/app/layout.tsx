@@ -11,7 +11,7 @@ const archivo = Archivo({
 
 export const metadata: Metadata = {
   title: "GrubHTML",
-  description: "Created with Frontend Tribe",
+  description: "A Portfolio Website for GrubHTML",
 };
 
 export default function RootLayout({
@@ -22,12 +22,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link
-          rel="icon"
-          href="/icon?<generated>"
-          type="image/<generated>"
-          sizes="<generated>"
-        />
+      <link rel="icon" href="/favicon.ico" />
+
       </head>
       <body
         className={`antialiased bg-stone-200 text-stone-900 ${archivo.variable} font-sans`}

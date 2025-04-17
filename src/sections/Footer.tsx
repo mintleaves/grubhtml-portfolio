@@ -72,7 +72,7 @@ const Footer: FC = () => {
 
   return (
     <footer
-      className="dark:bg-[linear-gradient(180deg,#27272a,#18181b)] text-white"
+      className="bg-[linear-gradient(180deg,#27272a,#18181b)] text-white"
       id="contact"
     >
       <div className="container !max-w-full">
