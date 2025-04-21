@@ -125,7 +125,11 @@ const Footer: FC = () => {
                   </div>
                 }
               >
+              <a
+                href="mailto:info@grubhtml.com"
+              >
                 info@grubhtml.com
+              </a>
               </Button>
             </div>
             <div>

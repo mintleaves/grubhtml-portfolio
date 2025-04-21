@@ -53,7 +53,6 @@ const Header: FC = () => {
           },
         ],
       ]);
-      navAnimate(navScope.current, { height: "100%" }, { duration: 0.7 });
       bottomLineAnimate([
         [
           bottomLineScope.current,
@@ -68,6 +67,7 @@ const Header: FC = () => {
           },
         ],
       ]);
+      navAnimate(navScope.current, { height: "100%" }, { duration: 0.7 });
     } else {
       topLineAnimate([
         [
@@ -105,8 +105,8 @@ const Header: FC = () => {
     topLineScope,
     bottomLineAnimate,
     bottomLineScope,
-    navAnimate,
     navScope,
+    navAnimate,
   ]);
   const handleClickMobileNavItem = (e: MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
@@ -195,7 +195,6 @@ const Header: FC = () => {
                     ref={topLineScope}
                     style={{
                       transformOrigin: "12px 8px",
-                      // transform: "translateY(4px) rotate(45deg)",
                     }}
                   />
                   <motion.rect
@@ -207,7 +206,6 @@ const Header: FC = () => {
                     ref={bottomLineScope}
                     style={{
                       transformOrigin: "12px 16px",
-                      // transform: "translateY(-4px) rotate(-45deg)",
                     }}
                   />
                 </svg>
@@ -215,6 +213,11 @@ const Header: FC = () => {
               <Button
                 variant="primary"
                 className="hidden md:inline-flex transition-all duration-500 hover:bg-red-700 hover:text-stone-300"
+                onClick={() =>
+                  document
+                    .getElementById("contact")
+                    ?.scrollIntoView({ behavior: "smooth" })
+                }
               >
                 Contact Us
               </Button>
